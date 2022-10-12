@@ -24,7 +24,13 @@ pipeline {
           steps {
               echo 'Build the packages using Maven'
               echo "mvn clean install"
-          }     
+          }
+	   post {
+                success {
+                    echo "Now Archiving the Artifacts....."
+                    archiveArtifacts artifacts: '**/*.war'
+                }
+            }
       } 
    
    }
