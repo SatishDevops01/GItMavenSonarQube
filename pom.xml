@@ -7,6 +7,12 @@
   <version>1.0-SNAPSHOT</version>
   <name>SampleWebApplication Maven Webapp</name>
   <url>http://maven.apache.org</url>
+<properties>
+    <baseFolder>${basedir}</baseFolder>
+</properties>
+<build>
+    <directory>${baseFolder}/target</directory>
+</directory>
   <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
